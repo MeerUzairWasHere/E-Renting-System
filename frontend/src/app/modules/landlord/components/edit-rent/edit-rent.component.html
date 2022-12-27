@@ -1,0 +1,111 @@
+<app-top-nav-bar>
+</app-top-nav-bar>
+<mat-card id="container">
+    <h1 text align="center">Edit Room</h1>
+
+    <mat-form-field id="txt-area" appearance="outline">
+
+        <textarea placeholder="Description" [(ngModel)]=" editRoomDetails.description" matInput></textarea>
+    </mat-form-field>
+
+    <div class="row">
+        <div class="col">
+            <mat-form-field class="input-field" appearance="outline">
+                <input matInput placeholder="Street" [(ngModel)]="editRoomDetails.street" name="street">
+            </mat-form-field>
+        </div>
+
+
+
+
+
+
+        <div class="col">
+            <mat-form-field class="input-field" appearance="outline">
+                <input matInput placeholder="City" [(ngModel)]="editRoomDetails.city" name="city">
+            </mat-form-field>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-6">
+            <mat-form-field id="select-design" placeholder="District" appearance="outline">
+                <mat-label>District</mat-label>
+                <select matNativeControl name="district" [(ngModel)]="editRoomDetails.district">
+        <option>Srinagar</option>
+        <option>Baramulla</option>
+        <option>Ganderbal</option>
+      </select>
+            </mat-form-field>
+        </div>
+
+
+
+
+        <div class="col">
+            <mat-form-field id="select-design" placeholder="State" appearance="outline">
+                <mat-label>State</mat-label>
+                <select matNativeControl [(ngModel)]="editRoomDetails.state" name="state">
+        <option>Jammu and kashmir</option>
+        <option>Assam</option>
+        <option>Bihar</option>
+      </select>
+            </mat-form-field>
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-6">
+            <mat-form-field class="input-field" appearance="outline">
+                <input matInput placeholder="Landmark" [(ngModel)]="editRoomDetails.landmark" name="landmark">
+            </mat-form-field>
+        </div>
+
+        <div class="col">
+            <mat-form-field id="input-design" appearance="outline">
+                <input matInput placeholder="Room No" type="number" name="roomNo" [(ngModel)]="editRoomDetails.roomNo">
+            </mat-form-field>
+        </div>
+
+
+        <div class="col">
+            <mat-form-field class="input-field" appearance="outline">
+                <input matInput placeholder="Pincode" [(ngModel)]="editRoomDetails.pincode" name="pincode">
+            </mat-form-field>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col">
+            <!-- <mat-form-field id="input-design" appearance="outline"> -->
+                
+            <input type="file" class="input-upload" name="myfile" accept="image/*" (change)="changelegaldoc($event)" multiple/>
+            <!-- </mat-form-field> -->
+        </div>
+        <div class="col">
+            <!-- <mat-form-field id="input-design" appearance="outline"> -->
+            <input type="file" class="input-upload" name="myfile" accept="image/*" (change)="changeImg($event)" multiple/>
+            <!-- <input matInput placeholder="images" name="images" [(ngModel)]="AddModel.images"> -->
+            <!-- </mat-form-field> -->
+        </div>
+    </div>
+    <mat-form-field id="select-design" appearance="outline">
+        <mat-label>Room-Type</mat-label>
+        <select matNativeControl name="RoomType" [(ngModel)]="editRoomDetails.roomTypes">
+      <option>1BHK</option>
+      <option>2BHK</option>
+      <option>3BHK</option>
+    </select>
+    </mat-form-field>
+    <mat-card-actions>
+        <button id="btn-design" (click)="Editroom()" mat-raised-button color="primary">Edit</button>
+        <button id="btn-design" (click)="back()" mat-raised-button color="primary">Back</button>
+
+    </mat-card-actions>
+
+
+
+</mat-card>

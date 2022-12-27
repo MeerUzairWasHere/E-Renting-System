@@ -1,0 +1,33 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="toggleRightSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>RENTING-SYSTEM</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+     
+    </button>
+    
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <!-- <mat-icon>share</mat-icon> -->
+                <div ngbDropdown class="d-inline-block">
+                  <!-- notification call -->
+               <i class="fa fa-bell"  id="dropdownBasic1" ngbDropdownToggle matBadge={{notificationCount}} matBadgeSize="small" aria-hidden="true" *ngIf="role=='landlord'" (onclick)="notification()"></i> 
+
+                  
+                  <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <button ngbDropdownItem *ngFor="let value of notify" [value]="value" (click)="getDropDown(value)">{{value?.notification}}</button>
+                  </div>
+                </div>
+    </button>
+    
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <!-- <mat-icon>share</mat-icon> -->
+
+      <i class="fa fa-sign-out fa-lg"  aria-hidden="true" (click)="logOut()"></i>
+    </button>
+</mat-toolbar>
+
+
+
+ 

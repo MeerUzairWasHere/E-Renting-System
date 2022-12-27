@@ -1,0 +1,42 @@
+<mat-card class=" mat-elevation-z8">
+    <div class="row" >
+     <div class ="col-6">
+    <mat-card-subtitle>
+        <mat-card-subtitle  class="d-flex justify-content-between" >First name</mat-card-subtitle>
+        <mat-card-subtitle>{{notifyModel.firstName}}</mat-card-subtitle>
+    </mat-card-subtitle>
+    </div>
+    <div class ="col-6">
+    <mat-card-subtitle >
+        <mat-card-subtitle  class="d-flex justify-content-between">Last  name</mat-card-subtitle>
+        <mat-card-subtitle>{{notifyModel.lastName}}</mat-card-subtitle>
+    </mat-card-subtitle>
+    </div></div>
+    <div class="row">
+        <div class ="col-6">
+    <mat-card-subtitle>
+        <mat-card-subtitle  class="d-flex justify-content-between">Email</mat-card-subtitle>
+        <mat-card-subtitle>{{notifyModel.email}}</mat-card-subtitle>
+    </mat-card-subtitle></div>
+    <div class ="col-6">
+    <mat-card-subtitle>
+        <mat-card-subtitle  class="d-flex justify-content-between">Password</mat-card-subtitle>
+        <mat-card-subtitle>{{notifyModel.password}}</mat-card-subtitle>
+    </mat-card-subtitle>
+    </div></div>
+    <div class="row">
+        <div class ="col-6">  
+    <mat-card-subtitle >
+        <mat-card-subtitle  class="d-flex justify-content-between">Phone Number</mat-card-subtitle>
+        <mat-card-subtitle>{{notifyModel.contact}}</mat-card-subtitle>
+    </mat-card-subtitle></div>
+    <div class ="col-6">
+    <mat-card-subtitle>
+        <mat-card-subtitle  class="d-flex justify-content-between">Address</mat-card-subtitle>
+        <mat-card-subtitle>{{notifyModel.address}}</mat-card-subtitle>
+    </mat-card-subtitle>
+    </div></div>
+    
+    <button mat-raised-button color="primary" (click)="approveBooking()">Approve</button>
+    <button mat-raised-button color="warn" (click)="rejectBooking()">Reject</button>
+    </mat-card>

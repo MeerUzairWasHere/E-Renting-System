@@ -1,0 +1,66 @@
+.booking-body {
+    height: 100vh;
+}
+
+table {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10px;
+}
+
+.tableHeight {
+    height: 100vh;
+}
+
+#add_btn {
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+i {
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+td.mat-cell {
+    padding: 10px;
+}
+
+.mat-column-landLordName {
+  
+    width: 25% !important;
+ 
+    word-break: break-word;
+  
+  
+  }
+
+  .mat-column-contact {
+  
+    width: 25% !important;
+ 
+    word-break: break-word;
+  
+  
+  }
+
+ 
+  .mat-column-roomTypes {
+  
+    width: 25% !important;
+ 
+    word-break: break-word;
+  
+  
+  } 
+
+  
+  .mat-column-approvalStatus{
+  
+    width: 25% !important;
+ 
+    word-break: break-word;
+  
+  
+  } 

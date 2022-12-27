@@ -1,0 +1,39 @@
+.row > *{
+    margin-bottom: 20px;
+    
+    
+}
+.row{
+margin-left: 2%;
+flex-wrap: wrap;
+display:flex;
+
+   }
+
+.ibox{
+    
+    margin-bottom:20px;
+    margin-top:20px;
+    margin-left:10%;
+    border: 1px solid gray;
+    padding-bottom: 5px;
+    box-shadow: -2px 2px 4px;
+    background-color: white;
+    width: 70%;
+    height:80%;
+    
+}
+.ibox-title{
+    text-align: center;
+    margin-top:5%;
+}
+.ibox-content{
+    text-align: center;
+    margin-top:10%;
+    padding-bottom: 15%;
+}
+h3{
+
+    color:Gray;
+}
+

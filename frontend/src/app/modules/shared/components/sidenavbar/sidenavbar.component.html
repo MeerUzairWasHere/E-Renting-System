@@ -1,0 +1,88 @@
+
+<mat-drawer #sidenav class="mt-6  col-xl-2 col-lg-3 col-md-3 col-sm-6 col-12  " mode="side">
+
+    <!-- <img class="image" src=""> --> 
+    <div class="center mt-3">
+        <img mat-card-avatar [src]="profilePicture" alt="img err">
+    </div>
+     
+    <div class="dropDownContainer">
+        <button mat-icon-button aria-label="Example icon-button with share icon" class="button-dropDown">
+          
+            <div ngbDropdown class="d-inline-block">
+                        <label  ngbDropdownToggle id="dropdownBasic1" class="ps-2"> {{firstName  + ' ' + lastName}}</label>
+                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                          <button ngbDropdownItem (click)="editUserDialog()" >edit</button>
+        <button ngbDropdownItem (click)="changePasswordDialog()">change password</button>
+        </div>
+        </div>
+    
+        </button>
+    </div>
+  
+
+    <mat-divider></mat-divider>
+    <!-- <div *ngIf="userDetails?.role=='admin' || userDetails?.role=='landlord'" > -->
+        
+    <div>
+        <!-- <button mat-button class="menu-button" (click)="home()">
+            <i class="fa fa-home fa-1x fa-fw" aria-hidden="true"></i>
+     <span>HOME</span>
+     </button>
+
+    <div *ngIf='dashboard'> -->
+        <button mat-button class="menu-button">
+       <i class="fa fa-tachometer fa-1x fa-fw" aria-hidden="true"></i>
+       <span (click)="redirectDashboard()">DASHBOARD</span>
+      </button>
+    </div>
+
+
+   
+    <div >
+        <button mat-button class="menu-button">
+            <i class="fa fa-list fa-1x fa-fw" aria-hidden="true"></i>
+     <span (click)="rentList()">Rent List</span>
+     </button>
+    </div>
+    <div>
+        <button mat-button class="menu-button">
+            <i class="fa fa-book fa-1x fa-fw" aria-hidden="true"></i>
+     <span (click)="myBookings()">My Bookings</span>
+     </button>
+
+    </div>
+
+    <div *ngIf='isAdmin'>
+        <button mat-button class="menu-button">
+        <i class="fa fa-cog fa-1x fa-fw " aria-hidden="true"></i>
+         <span >MANAGE</span>
+         <mat-select>
+            <mat-option (click)="listLandlord()">Landlord</mat-option>
+            <mat-option [routerLink]="['/list-all-tenants']">Tenant</mat-option>
+            <!-- [routerLink]="['/landlordlist'] -->
+        </mat-select>
+        </button>
+
+    </div>
+    <!-- <div>
+        <button mat-button class="menu-button">
+         <i class="fa fa-question-circle fx-1x  fa-fw" aria-hidden="true"></i>
+         <span>HELP</span>
+         </button>
+
+    </div> -->
+
+    <div>
+        <button mat-button class="menu-button" (click)="RentDetails()">
+            
+         <span *ngIf="userDetails?.role=='admin'">RentListDetails</span>
+         
+        </button>
+
+    </div>
+
+
+
+
+</mat-drawer>

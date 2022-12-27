@@ -1,0 +1,41 @@
+
+  <div class="banner">
+  <!-- <img src="logo.jpg" class="logo"> -->
+  <a href="home"><img src="logo.jpg" class="logo" /></a>
+
+  <mat-card id="container" class="mat-elevation-z8">
+    <h1 align="center">Log in</h1>
+
+    <form class="form">
+      <mat-form-field id="email" appearance="outline">
+        <input
+          matInput
+          placeholder="Enter email address"
+          name="email"
+          [(ngModel)]="authModel.email"
+          [ngModelOptions]="{ standalone: true }"
+        /> </mat-form-field
+      ><br /><br />
+
+      <mat-form-field id="pwd" appearance="outline">
+        <input
+          matInput
+          type="Password"
+          placeholder="Password"
+          name="password"
+          [(ngModel)]="authModel.password"
+          [ngModelOptions]="{ standalone: true }"
+        /> </mat-form-field
+      ><br /><br />
+
+      <button mat-raised-button id="bttn" color="primary" (click)="login()">
+        LOGIN
+      </button>
+      <br /><br />
+      <div id="footer">
+        <label>Not having an account?</label>
+        <span routerLink="/register"> Sign up</span>
+      </div>
+    </form>
+  </mat-card>
+</div>

@@ -1,0 +1,65 @@
+<app-top-nav-bar></app-top-nav-bar>
+<button id="add_btn" mat-raised-button *ngIf="param=='landlord'" (click)="add_room()"> Add Room </button>
+
+<div class="screentHeight">
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr> -->
+
+        <ng-container matColumnDef="streetname">
+            <th mat-header-cell *matHeaderCellDef> Street Name </th>
+            <td mat-cell *matCellDef="let element">{{element?.street ? element?.street :'not set'}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="city">
+            <th mat-header-cell *matHeaderCellDef> City </th>
+            <td mat-cell *matCellDef="let element"> {{element?.city ? element?.city :'not set'}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="district">
+            <th mat-header-cell *matHeaderCellDef> District </th>
+            <td mat-cell *matCellDef="let element"> {{element?.district ? element?.district :'not set'}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="state">
+            <th mat-header-cell *matHeaderCellDef> State </th>
+            <td mat-cell *matCellDef="let element"> {{element?.state ? element?.state :'not set'}} </td>
+        </ng-container>
+
+
+
+        <ng-container matColumnDef="pincode">
+            <th mat-header-cell *matHeaderCellDef> Pincode </th>
+            <td mat-cell *matCellDef="let element"> {{element?.pincode ? element?.pincode :'not set'}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="roomtype">
+            <th mat-header-cell *matHeaderCellDef> Room-Type </th>
+            <td mat-cell *matCellDef="let element"> {{element?.roomTypes ? element?.roomTypes :'not set'}} </td>
+        </ng-container>
+
+
+
+
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef> Action </th>
+            <td mat-cell *matCellDef="let row">
+                <i class="fa fa-eye-slash text-info" aria-hidden="true" (click)="info(row)"></i>
+                <span *ngIf="param=='landlord'">
+            <i class="fa fa-edit text-primary" (click)= "editDetails(row)"></i>
+            <i class="fa fa-trash text-danger" (click)="deleteDetails(row)"></i>
+        </span>
+            </td>
+        </ng-container>
+
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+        </tr>
+    </table>
+
+    </div>

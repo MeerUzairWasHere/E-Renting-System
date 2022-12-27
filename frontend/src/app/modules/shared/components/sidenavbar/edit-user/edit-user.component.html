@@ -1,0 +1,48 @@
+
+
+<h1 mat-dialog-title>Edit user</h1>
+
+    
+<mat-dialog-content>
+    <mat-form-field appearance="fill">
+        <mat-label>First Name </mat-label>
+        <input name="firstName" matInput [(ngModel)]="editUser.firstName" >
+    </mat-form-field>
+  
+
+    <mat-form-field appearance="fill">
+        <mat-label>Last Name </mat-label>
+        <input matInput name="lastName" [(ngModel)]="editUser.lastName"  >
+    </mat-form-field>
+   
+</mat-dialog-content>
+
+<mat-dialog-content>
+    <mat-form-field appearance="fill">
+        <mat-label>Email </mat-label>
+        <input matInput name="email" type="email" [(ngModel)]="editUser.email"  >
+    </mat-form-field>
+    
+</mat-dialog-content>
+
+
+<mat-dialog-content>
+    <mat-form-field appearance="fill">
+        <mat-label>Address </mat-label>
+        <input matInput name="address" [(ngModel)]="editUser.address" >
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Contact </mat-label>
+        <input matInput type="number" name="contact" [(ngModel)]="editUser.contact"  >
+    </mat-form-field>
+</mat-dialog-content>
+
+
+
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button mat-raised-button color="primary"  (click)="editUserDetails()" [mat-dialog-close]="editUser" cdkFocusInitial>Edit</button>
+  </mat-dialog-actions>
+
+    

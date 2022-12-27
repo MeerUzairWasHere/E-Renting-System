@@ -1,0 +1,152 @@
+
+
+.logo {
+  background: url(logo.jpg);
+  cursor: pointer;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.banner {
+  width: 100%;
+  height: 721px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(rent.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.navbar {
+  width: 85;
+  margin: auto;
+  padding: 35px 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+.navbar ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #009688;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+.navbar ul li:hover::after {
+  width: 100%;
+}
+.content {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+.content h1 {
+  font-size: 70px;
+  margin-top: -38%;
+}
+.content p {
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px;
+  font-size:20px;
+}
+//-----------------------------card--------------------------------------------//
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #f7f8fc;
+  font-family: "Roboto", sans-serif;
+  color: #10182f;
+}
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding-left: 200px;
+  margin-top: 10%;
+}
+.card {
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 300px;
+  height: 405px;
+  cursor: pointer;
+  transition: transform 0.5s;
+  //how to add border size in css?
+
+  border-width: 0 0px;
+}
+.card:hover {
+  transform: translateY(-20px);
+}
+.card-header img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+
+  min-height: 250px;
+}
+
+.tag {
+  background: #cccccc;
+  border-radius: 50px;
+  font-size: 12px;
+  margin: 0;
+  color: #fff;
+  padding: 2px 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.tag-teal {
+  background-color: #47bcd4;
+  margin-top: -33px;
+}
+.tag-purple {
+  background-color: #5e76bf;
+  margin-top: -72px;
+}
+.tag-pink {
+  background-color: #cd5b9f;
+  margin-top: -52px;
+}
+
+.card-body p {
+  font-size: 13px;
+  margin: 0 0 40px;
+}
+
+// -----------------------------------------------//

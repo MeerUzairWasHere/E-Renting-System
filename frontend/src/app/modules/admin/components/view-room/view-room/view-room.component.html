@@ -1,0 +1,92 @@
+
+<button mat-icon-button class="close-button" [mat-dialog-close]="true">
+    <mat-icon class="close-icon" color="warn">close</mat-icon>
+  </button>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-8 col-md-6 col-sm-12 mt-5">
+            <mat-card class=" mat-elevation-z8">
+
+
+
+
+                <ngb-carousel *ngIf="imagePath">
+
+                    <ng-template ngbSlide *ngFor="let images of imagePath">
+
+                        <div class="picsum-img-wrapper">
+                            <img mat-card-image [src]="images" class="mh-100" style="width: 100%; height: 50vh" alt="Random first slide" height="300" width="860">
+                        </div>
+
+                    </ng-template>
+
+
+
+                </ngb-carousel>
+
+            </mat-card>
+        </div>
+        <div class="col-xl-4 col-md-6 col-sm-12 mt-5">
+            <mat-card class=" mat-elevation-z8">
+
+                <mat-card-title>
+                    Rent Details
+                </mat-card-title>
+                <mat-divider></mat-divider>
+                <mat-card-subtitle class="mt-3 d-flex justify-content-between">
+                    <mat-card-subtitle>State</mat-card-subtitle>
+                    <mat-card-subtitle>{{roomDetails.state}}</mat-card-subtitle>
+                </mat-card-subtitle>
+                <mat-card-subtitle class="d-flex justify-content-between">
+                    <mat-card-subtitle>District</mat-card-subtitle>
+                    <mat-card-subtitle>{{roomDetails.district}}</mat-card-subtitle>
+                </mat-card-subtitle>
+                <mat-card-subtitle class="d-flex justify-content-between">
+                    <mat-card-subtitle>City</mat-card-subtitle>
+                    <mat-card-subtitle>{{roomDetails.city}}</mat-card-subtitle>
+                </mat-card-subtitle>
+                <mat-card-subtitle class="d-flex justify-content-between">
+                    <mat-card-subtitle>Landmark</mat-card-subtitle>
+                    <mat-card-subtitle>{{roomDetails.landmark}}</mat-card-subtitle>
+                </mat-card-subtitle>
+                <mat-card-subtitle class="d-flex justify-content-between">
+                    <mat-card-subtitle>Price</mat-card-subtitle>
+                    <mat-card-subtitle>5000</mat-card-subtitle>
+                </mat-card-subtitle>
+
+                <mat-card-actions align="end">
+
+                    <div [ngSwitch]="isApproved">
+                        <!-- <button *ngSwitchCase="'notApplied'" mat-raised-button color="primary" (click)="applyBooking()">Apply</button>         -->
+                        <!-- <button *ngSwitchCase="'pending'" mat-raised-button disabled>Already applied</button>         -->
+                        <!-- <button *ngSwitchCase="'approved'" mat-raised-button disabled>Already Booked</button>         -->
+                    </div>
+
+                    <ng-template #pending>
+                        <button mat-raised-button disabled>Approval Pending</button>
+                    </ng-template>
+                </mat-card-actions>
+
+
+
+
+
+
+            </mat-card>
+        </div>
+        <div class="col-12 mt-5">
+            <mat-card class="mat-elevation-z8 mb-10">
+                <mat-card-title>
+                    Description
+                </mat-card-title>
+                <mat-divider></mat-divider>
+                <mat-card-content class="pt-3">
+
+                    <p>{{roomDetails.description}}</p>
+                </mat-card-content>
+
+            </mat-card>
+
+        </div>
+    </div>
+</div>

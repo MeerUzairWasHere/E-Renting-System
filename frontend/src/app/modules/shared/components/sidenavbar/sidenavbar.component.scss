@@ -1,0 +1,38 @@
+.example-container {
+    width: 100px;
+    height: 2000px;
+    border: 1px solid rgba(192, 107, 107, 0.5);
+}
+
+.mt-6 {
+    margin-top: 63px;
+    height: 2000px; 
+}
+
+.mat-list {
+    background-color: royalblue;
+    height: 2000px;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.button-dropDown{
+    width: 100%;
+}
+
+.dropDownContainer{
+ 
+        width: 100%;
+        display: flex;
+        justify-content: center;
+}

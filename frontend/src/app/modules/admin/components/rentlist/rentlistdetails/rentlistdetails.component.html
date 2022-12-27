@@ -1,0 +1,40 @@
+
+<h1 mat-dialog-title>Edit Rent Details</h1>
+
+    
+<mat-dialog-content>
+    <mat-form-field appearance="fill">
+        <mat-label>Landlord Name </mat-label>
+        <input name="landLordName"  matInput [(ngModel)]="editRentDetails.landLordId.firstName" >
+    </mat-form-field>
+  
+
+    <mat-form-field appearance="fill">
+        <mat-label>Location </mat-label>
+        <input  name="location"  matInput [(ngModel)]="editRentDetails.city" > 
+    </mat-form-field>
+   
+</mat-dialog-content>
+
+<mat-dialog-content>
+    <mat-form-field appearance="fill">
+        <mat-label>Room Type </mat-label> 
+        <input  name="roomType"  matInput [(ngModel)]="editRentDetails.roomTypes" >
+    </mat-form-field>
+    
+
+    <mat-form-field appearance="fill">
+        <mat-label>Phone No </mat-label>
+        <input  name="contact" type="number"  matInput [(ngModel)]="editRentDetails.landLordId.contact"> 
+    </mat-form-field>
+</mat-dialog-content>
+
+
+
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button mat-raised-button color="primary primary" (click)="editRentInfo()" cdkFocusInitial>Edit Rent</button>
+  </mat-dialog-actions>
+
+    
+

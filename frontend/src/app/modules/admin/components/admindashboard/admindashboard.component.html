@@ -1,0 +1,68 @@
+<app-top-nav-bar>
+
+</app-top-nav-bar>
+
+<mat-card>
+    <div class="wrapper wrapper-content">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="ibox ">
+                    <div class="ibox-title">
+
+                        <h3>Active landlords</h3>
+                        <hr>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins">{{landLordList}}</h1>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="ibox ">
+                    <div class="ibox-title">
+
+                        <h3>Active Tenants</h3>
+                        <hr>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins">{{tenantList}}</h1>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="ibox ">
+                    <div class="ibox-title">
+
+                        <h3>Total Rooms occupied</h3>
+                        <hr>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins">{{totalOccipiedRooms}}</h1>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="ibox1 ">
+                    <div class="ibox-title">
+
+                    </div>
+                    <div *ngIf="doughnutChartData.datasets[0].data" class="ibox-content">
+
+                        <canvas baseChart [data]="doughnutChartData" [type]="doughnutChartType">
+                                </canvas>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <app-landlordlist></app-landlordlist>
+    <app-tenantlist></app-tenantlist>
+    <app-rentlist></app-rentlist>
+
+</mat-card>

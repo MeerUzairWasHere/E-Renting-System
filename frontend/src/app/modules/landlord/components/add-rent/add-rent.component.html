@@ -1,0 +1,117 @@
+<app-top-nav-bar></app-top-nav-bar>
+<mat-card>
+    <h1 id="hdesign">Add New Room</h1>
+    <mat-form-field id="txt-area" appearance="outline">
+        <textarea name="description" placeholder="Description" required [(ngModel)]="AddModel.description" matInput></textarea>
+    </mat-form-field>
+    <div class="row">
+        <div class="col">
+            <mat-form-field id="input-design" appearance="outline">
+                <input matInput placeholder="Street Name" name="street" required [(ngModel)]="AddModel.street">
+            </mat-form-field>
+        </div>
+        <div class="col">
+            <mat-form-field id="input-design" appearance="outline">
+                <input matInput placeholder="City" required name="city" [(ngModel)]="AddModel.city">
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <mat-form-field id="select-design"  required name="state" appearance="outline">
+                <mat-label>Select State</mat-label>
+                <select matNativeControl name="state" [(ngModel)]="AddModel.state">
+          <option>Jammu & Kashmir</option>
+          <option>Delhi</option>
+          <option>Mumbai</option>
+          <option>Ladahk</option>
+          <option>Leh</option>
+
+        </select>
+            </mat-form-field>
+        </div>
+        <div class="col">
+            <mat-form-field id="input-design" appearance="outline">
+                <input matInput placeholder="Room No"   required type="number"  name="roomNo" [(ngModel)]="AddModel.roomNo">
+            </mat-form-field>
+        </div>
+        <div class="col">
+            <mat-form-field id="select-design" name="district" appearance="outline">
+                <mat-label>Select District</mat-label>
+                <select matNativeControl name="district" required [(ngModel)]="AddModel.district">
+          <option>Srinagar</option>
+          <option>Baramulla</option>
+          <option>Anantnag</option>
+        </select>
+            </mat-form-field>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <mat-form-field id="input-design" appearance="outline">
+                <input matInput placeholder="Landmark"  required type="text"  name="landmark">
+            </mat-form-field>
+        </div>
+        <div class="col">
+            <mat-form-field id="input-design" appearance="outline">
+                <input matInput placeholder="Pincode" type="number" pattern="[0-9]{6}" [(ngModel)]="AddModel.pincode" name="pincode">
+            </mat-form-field>
+        </div>
+    </div>
+
+
+    <!-- <div class="row">
+        <div class="col">
+            <mat-form-field id="input-design" appearance="outline"> -->
+
+    <!-- <input type="file" class="input-upload" name="myfile" accept="image/*" (change)="changelegaldoc($event)" multiple/>
+            </mat-form-field>
+        </div>  -->
+    <div class="row">
+        <div class="col-lg-6">
+            <label class="file">Add Legal Documents</label>
+            <input type="file" class="form-control" name="myfile" accept="image/*" (change)="changelegaldoc($event)" multiple/>
+
+            <span class="file-custom"></span>
+
+
+
+
+        </div>
+        <div class="col-lg-6">
+            <label class="file">Add Profile Picture</label>
+            <input type="file" class="form-control" name="myfile" accept="image/*" (change)="changeImg($event)" multiple/>
+
+            <span class="file-custom"></span>
+
+        </div>
+    </div><br>
+    <!-- <div class="col">
+            <mat-form-field id="input-design" appearance="outline">
+            <input type="file" class="input-upload" name="myfile" accept="image/*" (change)="changeImg($event)" multiple/>
+            <input matInput placeholder="images" name="images" [(ngModel)]="AddModel.images"> -->
+    <!-- </mat-form-field>
+        </div>
+    </div> -->
+    <div class="row">
+
+    </div><br>
+
+    <mat-form-field id="select-design" name="roomtypes" appearance="outline">
+        <mat-label>Enter Room type:</mat-label>
+        <select name="room_types" [(ngModel)]="AddModel.roomTypes" matNativeControl>
+      <option name="1bhk">1BHK</option>
+      <option name="2bhk">2BHK</option>
+      <option name="3bhk">3BHK</option>
+    </select>
+    </mat-form-field>
+    <img width="80vh" src="{{AddModel.image}}" alt="">
+    <mat-card-actions>
+        <button (click)="Addroom()" mat-raised-button color="primary">Add Room</button>
+        <button (click)="back()" mat-raised-button color="primary">Back</button>
+    </mat-card-actions>
+
+
+
+</mat-card>
